@@ -1,0 +1,42 @@
+
+const int led1 = 8;
+const int led2 = 9;
+const int led3 = 10;
+
+const int button1 = 2;
+const int button2 = 3;
+const int button3 = 4;
+
+void setup() {
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+
+  pinMode(button1, INPUT_PULLUP);
+  pinMode(button2, INPUT_PULLUP);
+  pinMode(button3, INPUT_PULLUP);
+}
+
+void loop() {
+  int buttonState1 = digitalRead(button1);
+  int buttonState2 = digitalRead(button2);
+  int buttonState3 = digitalRead(button3);
+
+  if (buttonState1 == LOW) {
+    digitalWrite(led1, HIGH);
+  } else {
+    digitalWrite(led1, LOW);
+  }
+
+  if (buttonState2 == LOW) {
+    digitalWrite(led2, HIGH);
+  } else {
+    digitalWrite(led2, LOW);
+  }
+
+  if (buttonState3 == LOW) {
+    digitalWrite(led3, HIGH);
+  } else {
+    digitalWrite(led3, LOW);
+  }
+}
